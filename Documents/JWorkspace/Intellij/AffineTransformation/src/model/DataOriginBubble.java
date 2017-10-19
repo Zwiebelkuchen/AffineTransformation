@@ -1,10 +1,10 @@
 package model;
 
-import frameworks.Matriz33;
+import frameworks.Matriz2D;
 
 public class DataOriginBubble {
     private static DataOriginBubble ourInstance = new DataOriginBubble();
-    private Matriz33 matriz33 = new Matriz33();
+    private Matriz2D matriz2D = new Matriz2D();
 
 
     public static DataOriginBubble getInstance() {
@@ -18,11 +18,11 @@ public class DataOriginBubble {
     private DataOriginBubble() {
     }
 
-    public Matriz33 getMatriz33() {
-        return matriz33;
+    public Matriz2D getMatriz2D() {
+        return matriz2D;
     }
 
-    public void setMatriz33(Matriz33 matriz33) {
-        this.matriz33 = matriz33;
+    public void setMatriz2D(Matriz2D matriz2D) {
+        this.matriz2D = matriz2D;
     }
 }

@@ -1,7 +1,7 @@
 package controller;
 
+import frameworks.AffineTransformationsCalc;
 import frameworks.ChartBuilder;
-import frameworks.Matriz33;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 public class CWindow implements  Initializable {
     private ChartBuilder chartbuilder = new ChartBuilder();
-
+private AffineTransformationsCalc affineTransformationsCalc = new AffineTransformationsCalc();
 
 
     @Override
@@ -45,14 +45,16 @@ public class CWindow implements  Initializable {
 
     @FXML
     protected void bResetAction(ActionEvent event){
+
+affineTransformationsCalc.lineCalc();
         originStackpane();
     }
 
     private void changeStackpane(){
-        stacki.getChildren().addAll(layerCharts(chartbuilder.createLineChartX(DataFlexibleLineX.getInstance().getMatriz33()), chartbuilder.createLineChartY(DataFlexibleLineY.getInstance().getMatriz33()), chartbuilder.createBubbleChart(DataFlexibleBubble.getInstance().getMatriz33())));
+        stacki.getChildren().addAll(layerCharts(chartbuilder.createLineChartX(DataFlexibleLineX.getInstance().getMatriz2D()), chartbuilder.createLineChartY(DataFlexibleLineY.getInstance().getMatriz2D()), chartbuilder.createBubbleChart(DataFlexibleBubble.getInstance().getMatriz2D())));
     }
     private void originStackpane(){
-        stacki.getChildren().addAll(layerCharts(chartbuilder.createLineChartX(DataOriginLineX.getInstance().getMatriz33()), chartbuilder.createLineChartY(DataOriginLineY.getInstance().getMatriz33()), chartbuilder.createBubbleChart(DataOriginBubble.getInstance().getMatriz33())));
+        stacki.getChildren().addAll(layerCharts(chartbuilder.createLineChartX(DataOriginLineX.getInstance().getMatriz2D()), chartbuilder.createLineChartY(DataOriginLineY.getInstance().getMatriz2D()), chartbuilder.createBubbleChart(DataOriginBubble.getInstance().getMatriz2D())));
     }
 
 

@@ -1,10 +1,10 @@
 package model;
 
-import frameworks.Matriz33;
+import frameworks.Matriz2D;
 
 public class DataOriginLineX {
     private static DataOriginLineX ourInstance = new DataOriginLineX();
-    private  Matriz33 matriz33;
+    private Matriz2D matriz2D;
 
 
     public static DataOriginLineX getInstance() {
@@ -18,11 +18,11 @@ public class DataOriginLineX {
     private DataOriginLineX() {
     }
 
-    public Matriz33 getMatriz33() {
-        return matriz33;
+    public Matriz2D getMatriz2D() {
+        return matriz2D;
     }
 
-    public void setMatriz33(Matriz33 matriz33) {
-        this.matriz33 = matriz33;
+    public void setMatriz2D(Matriz2D matriz2D) {
+        this.matriz2D = matriz2D;
     }
 }

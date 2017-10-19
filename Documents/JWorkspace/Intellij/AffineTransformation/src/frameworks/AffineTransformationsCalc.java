@@ -6,11 +6,12 @@ public class AffineTransformationsCalc {
     public AffineTransformationsCalc() {
     }
 
-    public Matriz33 calc(Matriz33 matriz33){
-        Matriz33 changeMatriz= null;
+    public void lineCalc(Matriz2D matriz2D){
+     int[][] lineChartX = new int[][]{{1,0,0},{0,1,0},{9,2,1}};
+     int[][] affine = matriz2D.getMatriz2D();
 
 
-        return changeMatriz;
+        System.out.println(lineChartX.length);
 
     }
 }

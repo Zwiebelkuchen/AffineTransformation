@@ -5,7 +5,6 @@ import javafx.scene.chart.BubbleChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.layout.StackPane;
 
 public class ChartBuilder {
 
@@ -14,11 +13,11 @@ public class ChartBuilder {
         return axis;
     }
 
-    public BubbleChart<Number, Number> createBubbleChart(Matriz33 matriz33) {
-        int[][] array = matriz33.getMatriz33();
+    public BubbleChart<Number, Number> createBubbleChart(Matriz2D matriz2D) {
+        int[][] array = matriz2D.getMatriz2D();
         int  x1= array[0][0];
-        int  y1= array[0][1];
-        int  x2= array[1][0];
+        int  y1= array[1][0];
+        int  x2= array[0][1];
         int  y2= array[1][1];
         final BubbleChart<Number, Number> chart = new BubbleChart<Number, Number>(createYaxis(), createYaxis());
         setDefaultChartProperties(chart);
@@ -34,11 +33,11 @@ public class ChartBuilder {
         return chart;
     }
 
-    public LineChart<Number, Number> createLineChartX(Matriz33 matriz33) {
-        int[][] array = matriz33.getMatriz33();
+    public LineChart<Number, Number> createLineChartX(Matriz2D matriz2D) {
+        int[][] array = matriz2D.getMatriz2D();
         int  x1= array[0][0];
-        int  y1= array[0][1];
-        int  x2= array[1][0];
+        int  y1= array[1][0];
+        int  x2= array[0][1];
         int  y2= array[1][1];
         final LineChart<Number, Number> chart = new LineChart<Number, Number>(createYaxis(), createYaxis());
         setDefaultChartProperties(chart);
@@ -55,11 +54,11 @@ public class ChartBuilder {
         );
         return chart;
     }
-    public LineChart<Number, Number> createLineChartY(Matriz33 matriz33) {
-        int[][] array = matriz33.getMatriz33();
+    public LineChart<Number, Number> createLineChartY(Matriz2D matriz2D) {
+        int[][] array = matriz2D.getMatriz2D();
         int  x1= array[0][0];
-        int  y1= array[0][1];
-        int  x2= array[1][0];
+        int  y1= array[1][0];
+        int  x2= array[0][1];
         int  y2= array[1][1];
         final LineChart<Number, Number> chart = new LineChart<Number, Number>(createYaxis(), createYaxis());
         setDefaultChartProperties(chart);
